@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Base64 encode all PNG files into a JSON file in the current directory
+# Written by: Matt Wiggins, Updated 06-24-2013
+
+json="["
+
+for file in *.png
+do
+  current="$(openssl base64 -in $file)"
+  json="${json}\n\t\"data:image/png;base64,$current\","
+done
+
+json="${json%?}\n]"
+
+echo -e $json > $1
