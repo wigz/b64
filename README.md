@@ -22,7 +22,7 @@ b64 will base64 encode all of the png files in the current directory, write them
 
 Known Issues
 ---
-1. Works on Mac only and requires openssl (http://www.openssl.org/).
+1. Works on Mac only and requires [openssl](http://www.openssl.org/) (openssl is usually installed by default).
 2. Does not support spaces in file names.
 3. Encoding large images / lots of images might take a while. Depending on what time it is or how you roll, grab some coffee or a beer.
 4. To keep your images in sequential order, name them with leading zeros (i.e. for hundreds of images: `001.png, 002.png ... 100.png` instead of `1.png, 2.png ... 100.png`).
